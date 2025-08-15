@@ -1,16 +1,21 @@
-# WayToWealth – Static Landing Page
+# PureWayWealth – Starter (Next.js + Supabase + Razorpay)
 
-This is a single-file static site using Tailwind CDN (no build tools).
+## Quick start
+1) `npm i`
+2) Copy `.env.example` to `.env.local` and fill SUPABASE + RAZORPAY vars
+3) Run SQL in Supabase SQL editor: `schema.sql`
+4) `npm run dev`
+5) Visit `http://localhost:3000` → try the quiz → see `/dashboard`
 
-## Quick Deploy (Netlify)
-1. Go to https://app.netlify.com/ → **Add new site** → **Deploy manually**.
-2. Drag & drop the folder you downloaded (or upload the ZIP).
-3. Done. Netlify gives you a live URL instantly.
+## Deploy
+- Push to GitHub → connect Netlify → set env vars → deploy
 
-## GitHub Pages (optional)
-1. Create a repo and push these files.
-2. In repo settings → **Pages** → Source: **Deploy from a branch** → select `main` and root.
-3. Open the given URL.
+## Where to edit
+- Landing: `src/pages/index.tsx`
+- Quiz: `src/pages/quiz.tsx`
+- Dashboard logic: `src/pages/dashboard.tsx`
+- Courses: `src/pages/courses/*`
+- Razorpay webhook: `src/pages/api/webhooks/razorpay.ts`
 
-## Local preview
-Just open `index.html` in your browser.
+## Notes
+- MVP scaffold. Add proper auth (OAuth), RLS, and secure order creation before going live.
