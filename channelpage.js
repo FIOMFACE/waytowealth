@@ -1,6 +1,4 @@
-export default function ChannelPage() {
-  return (
-    <div>import Head from "next/head";
+import Head from "next/head";
 
 export default function ChannelPage() {
   return (
@@ -30,6 +28,7 @@ export default function ChannelPage() {
           <a
             href="https://youtube.com/@yourchannel"
             target="_blank"
+            rel="noopener noreferrer"
             className="mt-6 inline-block px-6 py-3 rounded-xl bg-red-600 text-white font-semibold hover:bg-red-700"
           >
             Subscribe on YouTube
@@ -97,6 +96,7 @@ export default function ChannelPage() {
               <a
                 href="https://youtube.com/@yourchannel"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block px-6 py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700"
               >
                 Watch More on YouTube
@@ -109,32 +109,30 @@ export default function ChannelPage() {
         <div className="py-12 text-center">
           <h2 className="text-2xl font-bold mb-4">Connect With Me</h2>
           <div className="flex justify-center space-x-6">
-            <a href="https://twitter.com/" className="text-blue-500 font-medium">
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 font-medium"
+            >
               Twitter
             </a>
             <a
               href="https://instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-pink-500 font-medium"
             >
               Instagram
             </a>
-            <a href="mailto:your@email.com" className="text-gray-600 font-medium">
+            <a
+              href="mailto:your@email.com"
+              className="text-gray-600 font-medium"
+            >
               Email
             </a>
           </div>
         </div>
 
         {/* Footer */}
-        <footer className="bg-gray-800 text-gray-300 py-6 text-center">
-          <p>© 2025 PureWayWealth. All rights reserved.</p>
-        </footer>
-      </section>
-    </>
-  );
-}
-       </div>
-    </
-}
-    </div>
-  );
-}
+        <footer className="bg-gray-800 text-gray-300 py-
