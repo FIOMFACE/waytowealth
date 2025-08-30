@@ -1,100 +1,139 @@
 export default function ChannelPage() {
   return (
-    <div>
-      {<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Your Channel Name] - [Channel Tagline]</title>
-    <!-- Link to your CSS stylesheet -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <div>import Head from "next/head";
 
-    <header>
-        <div class="container">
-            <img src="your-logo.png" alt="Your Channel Logo" class="logo">
-            <h1>[Your Channel Name]</h1>
-            <p>[Your Channel Tagline/Brief Description]</p>
-            <a href="YOUR_YOUTUBE_CHANNEL_LINK" target="_blank" class="cta-button youtube-subscribe">Subscribe on YouTube</a>
-            <a href="[LINK_TO_LATEST_VIDEO]" class="cta-button secondary">Watch Latest Video</a>
+export default function ChannelPage() {
+  return (
+    <>
+      <Head>
+        <title>Channel | PureWayWealth</title>
+        <meta
+          name="description"
+          content="Join our channel to explore wealth, health, and peace insights."
+        />
+      </Head>
+
+      <section className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 text-gray-900">
+        {/* Header */}
+        <div className="max-w-5xl mx-auto text-center py-12 px-6">
+          <img
+            src="/logo.png"
+            alt="Channel Logo"
+            className="mx-auto w-20 h-20 mb-4"
+          />
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">
+            PureWayWealth Channel
+          </h1>
+          <p className="text-lg text-gray-600">
+            Your daily dose of Wealth 💰, Health ❤️, and Peace ☮️
+          </p>
+          <a
+            href="https://youtube.com/@yourchannel"
+            target="_blank"
+            className="mt-6 inline-block px-6 py-3 rounded-xl bg-red-600 text-white font-semibold hover:bg-red-700"
+          >
+            Subscribe on YouTube
+          </a>
         </div>
-    </header>
 
-    <section id="about">
-        <div class="container">
-            <img src="your-profile-picture.jpg" alt="Your Name" class="profile-pic">
-            <h2>About Me</h2>
-            <p>Hello! I'm [Your Name], and on this channel, I'm passionate about [what you do]. I started this channel to share [your mission/why]. You can expect [types of content] that will help you [benefit for viewer].</p>
-            <p>Join our growing community!</p>
+        {/* About Me */}
+        <div className="max-w-4xl mx-auto py-12 px-6">
+          <h2 className="text-2xl font-bold mb-4">About Me</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Hello 👋 I’m <span className="font-semibold">[Your Name]</span>, and
+            I started this channel to share insights that help you trade less,
+            sleep more, and live fully. Expect tips on wealth building,
+            well-being, and mindful living.
+          </p>
         </div>
-    </section>
 
-    <section id="featured-videos">
-        <div class="container">
-            <h2>Latest Videos</h2>
-            <!-- Embed your featured video -->
-            <div class="video-embed">
-                <iframe width="560" height="315" src="YOUR_FEATURED_VIDEO_YOUTUBE_URL" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-            <div class="video-grid">
-                <!-- Repeat for each latest video -->
-                <div class="video-item">
-                    <a href="[VIDEO_1_YOUTUBE_LINK]" target="_blank">
-                        <img src="thumbnail1.jpg" alt="Video 1 Title">
-                        <h3>Video 1 Title</h3>
-                    </a>
+        {/* Latest Videos */}
+        <div className="bg-white py-12">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-2xl font-bold mb-6 text-center">
+              Latest Videos
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Video 1 */}
+              <div className="bg-gray-100 rounded-xl shadow-md overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="250"
+                  src="https://www.youtube.com/embed/your_video_id"
+                  title="YouTube video"
+                  allowFullScreen
+                ></iframe>
+                <div className="p-4">
+                  <h3 className="font-semibold text-lg mb-2">
+                    Video 1 Title
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Short description of what this video covers.
+                  </p>
                 </div>
-                <div class="video-item">
-                    <a href="[VIDEO_2_YOUTUBE_LINK]" target="_blank">
-                        <img src="thumbnail2.jpg" alt="Video 2 Title">
-                        <h3>Video 2 Title</h3>
-                    </a>
+              </div>
+
+              {/* Video 2 */}
+              <div className="bg-gray-100 rounded-xl shadow-md overflow-hidden">
+                <iframe
+                  width="100%"
+                  height="250"
+                  src="https://www.youtube.com/embed/your_video_id"
+                  title="YouTube video"
+                  allowFullScreen
+                ></iframe>
+                <div className="p-4">
+                  <h3 className="font-semibold text-lg mb-2">
+                    Video 2 Title
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Short description of what this video covers.
+                  </p>
                 </div>
-                <!-- Add more video items -->
+              </div>
             </div>
-            <a href="YOUR_YOUTUBE_CHANNEL_LINK" target="_blank" class="cta-button">Watch More on YouTube</a>
-        </div>
-    </section>
 
-    <section id="why-subscribe">
-        <div class="container">
-            <h2>Why Join Us?</h2>
-            <ul>
-                <li>🚀 Never miss a new upload!</li>
-                <li>💡 Get exclusive tips & tricks.</li>
-                <li>💬 Connect with fellow [your niche] enthusiasts.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="connect">
-        <div class="container">
-            <h2>Connect With Me</h2>
-            <div class="social-links">
-                <a href="[INSTAGRAM_LINK]" target="_blank">Instagram</a>
-                <a href="[TWITTER_LINK]" target="_blank">Twitter</a>
-                <a href="[EMAIL_LINK]">Email</a>
-                <!-- Add more social links -->
+            <div className="text-center mt-8">
+              <a
+                href="https://youtube.com/@yourchannel"
+                target="_blank"
+                className="inline-block px-6 py-3 rounded-xl bg-blue-600 text-white font-medium hover:bg-blue-700"
+              >
+                Watch More on YouTube
+              </a>
             </div>
-            <div class="newsletter-signup">
-                <h3>Join the Newsletter</h3>
-                <!-- Embed your newsletter signup form here -->
-            </div>
+          </div>
         </div>
-    </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 [Your Channel Name]. All rights reserved.</p>
-            <p><a href="YOUR_YOUTUBE_CHANNEL_LINK" target="_blank">Visit my YouTube Channel</a></p>
+        {/* Social Links */}
+        <div className="py-12 text-center">
+          <h2 className="text-2xl font-bold mb-4">Connect With Me</h2>
+          <div className="flex justify-center space-x-6">
+            <a href="https://twitter.com/" className="text-blue-500 font-medium">
+              Twitter
+            </a>
+            <a
+              href="https://instagram.com/"
+              className="text-pink-500 font-medium"
+            >
+              Instagram
+            </a>
+            <a href="mailto:your@email.com" className="text-gray-600 font-medium">
+              Email
+            </a>
+          </div>
         </div>
-    </footer>
 
-</body>
-</html>
+        {/* Footer */}
+        <footer className="bg-gray-800 text-gray-300 py-6 text-center">
+          <p>© 2025 PureWayWealth. All rights reserved.</p>
+        </footer>
+      </section>
+    </>
+  );
+}
+       </div>
+    </
 }
     </div>
   );
